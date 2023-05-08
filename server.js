@@ -14,6 +14,14 @@ app.get("/Territories/All", (req, res) => {
   
 });
 
+const findUser = (res, { reqUsername, reqPassword, users }) => {
+  const foundUser = users.find((user) => user.username === reqUsername);
+
+  if (foundUser.password !== reqPassword) res.sendStatus(401); // TODO: put hashing?
+  if (foundUser)
+    return { username: foundUser.username, roles: foundUser.roles };
+};
+
 
 
 app.listen(3000);
