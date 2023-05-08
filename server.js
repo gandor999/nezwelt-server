@@ -34,8 +34,10 @@ const findUser = (res, { reqUsername, reqPassword, users }) => {
 
   if (!foundUser) res.sendStatus(404);
   if (foundUser.password !== reqPassword) res.sendStatus(401); // TODO: put hashing?
-  if (foundUser)
-    return { username: foundUser.username, roles: foundUser.roles };
+  if (foundUser) {
+    delete foundUser.password;
+    return foundUser;
+  }
 };
 
 const generateAccessToken = (userAuth) => {

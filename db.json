@@ -2,11 +2,13 @@
   "users": [
     {
       "username": "foo",
+      "displayName": "flying-raijin",
       "password": "bar",
       "roles": ["USER"]
     },
     {
       "username": "admin",
+      "displayName": "shinra-tensei",
       "password": "admin",
       "roles": ["ADMIN"]
     }
