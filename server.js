@@ -32,6 +32,7 @@ app.get("/Territories/All", authenticateToken, (req, res) => {
 const findUser = (res, { reqUsername, reqPassword, users }) => {
   const foundUser = users.find((user) => user.username === reqUsername);
 
+  if (!foundUser) res.sendStatus(404);
   if (foundUser.password !== reqPassword) res.sendStatus(401); // TODO: put hashing?
   if (foundUser)
     return { username: foundUser.username, roles: foundUser.roles };
