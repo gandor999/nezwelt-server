@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const jwt = require("jsonwebtoken");
@@ -52,4 +53,4 @@ function authenticateToken(req, res, next) {
   });
 }
 
-app.listen(3000);
+app.listen(process.env.PORT);
