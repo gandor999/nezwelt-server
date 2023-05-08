@@ -3,10 +3,12 @@ const express = require("express");
 const app = express();
 const jwt = require("jsonwebtoken");
 const fs = require("fs");
+const cors = require("cors");
 
 const { users, territories } = JSON.parse(fs.readFileSync("db.json"));
 
 app.use(express.json());
+app.use(cors());
 
 app.post("/Account/SignIn", (req, res) => {
   const { username, password } = req.body;
