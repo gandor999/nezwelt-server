@@ -8,11 +8,22 @@ const { users, territories } = JSON.parse(fs.readFileSync("db.json"));
 app.use(express.json());
 
 app.post("/Account/SignIn", (req, res) => {
-  
+  const { username, password } = req.body;
+
+  const userAuth = findUser(res, {
+    reqUsername: username,
+    reqPassword: password,
+    users,
+  });
+
+  if (!userAuth) res.sendStatus(404);
+
+  const token = generateAccessToken(userAuth);
+  res.json({ token, ...userAuth });
 });
 
-app.get("/Territories/All", (req, res) => {
-  
+app.get("/Territories/All", authenticateToken, (req, res) => {
+  res.json({ territories });
 });
 
 const findUser = (res, { reqUsername, reqPassword, users }) => {
