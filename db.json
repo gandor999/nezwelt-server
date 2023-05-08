@@ -1,0 +1,93 @@
+{
+  "users": [
+    {
+      "username": "foo",
+      "password": "bar",
+      "roles": ["USER"]
+    },
+    {
+      "username": "admin",
+      "password": "admin",
+      "roles": ["ADMIN"]
+    }
+  ],
+  "territories": [
+    {
+      "name": "Central Luzon",
+      "children": [
+        {
+          "name": "Bulacan",
+          "children": []
+        },
+        {
+          "name": "Nueva Ecija",
+          "children": []
+        },
+        {
+          "name": "Pampanga",
+          "children": []
+        },
+        {
+          "name": "Tarlac",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Metro Manila",
+      "children": [
+        {
+          "name": "Makati",
+          "children": [
+            {
+              "name": "Poblacion",
+              "children": []
+            },
+            {
+              "name": "Bel-Air",
+              "children": []
+            },
+            {
+              "name": "Urdaneta",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Manila",
+          "children": []
+        },
+        {
+          "name": "Marikina",
+          "children": [
+            {
+              "name": "Malanday",
+              "children": [
+                {
+                  "name": "Lamuan",
+                  "children": []
+                },
+                {
+                  "name": "Sta. Terisita",
+                  "children": []
+                },
+                {
+                  "name": "Malaya",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "San Roque",
+              "children": []
+            },
+            {
+              "name": "Concepcion",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
