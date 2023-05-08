@@ -14,80 +14,88 @@
   "territories": [
     {
       "name": "Central Luzon",
-      "children": [
-        {
-          "name": "Bulacan",
-          "children": []
-        },
-        {
-          "name": "Nueva Ecija",
-          "children": []
-        },
-        {
-          "name": "Pampanga",
-          "children": []
-        },
-        {
-          "name": "Tarlac",
-          "children": []
-        }
-      ]
+      "parent": null,
+      "id": 0
+    },
+    {
+      "name": "Bulacan",
+      "parent": 0,
+      "id": 1
+    },
+    {
+      "name": "Nueva Ecija",
+      "parent": 0,
+      "id": 2
+    },
+    {
+      "name": "Pampanga",
+      "parent": 0,
+      "id": 3
+    },
+    {
+      "name": "Tarlac",
+      "parent": 0,
+      "id": 4
     },
     {
       "name": "Metro Manila",
-      "children": [
-        {
-          "name": "Makati",
-          "children": [
-            {
-              "name": "Poblacion",
-              "children": []
-            },
-            {
-              "name": "Bel-Air",
-              "children": []
-            },
-            {
-              "name": "Urdaneta",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "Manila",
-          "children": []
-        },
-        {
-          "name": "Marikina",
-          "children": [
-            {
-              "name": "Malanday",
-              "children": [
-                {
-                  "name": "Lamuan",
-                  "children": []
-                },
-                {
-                  "name": "Sta. Terisita",
-                  "children": []
-                },
-                {
-                  "name": "Malaya",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "San Roque",
-              "children": []
-            },
-            {
-              "name": "Concepcion",
-              "children": []
-            }
-          ]
-        }
-      ]
+      "parent": null,
+      "id": 5
+    },
+    {
+      "name": "Makati",
+      "parent": 5,
+      "id": 6
+    },
+    {
+      "name": "Poblacion",
+      "parent": 6,
+      "id": 7
+    },
+    {
+      "name": "Bel-Air",
+      "parent": 6,
+      "id": 8
+    },
+    {
+      "name": "Urdaneta",
+      "parent": 6,
+      "id": 9
+    },
+    {
+      "name": "Marikina",
+      "parent": 5,
+      "id": 10
+    },
+    {
+      "name": "Malanday",
+      "parent": 10,
+      "id": 11
+    },
+    {
+      "name": "Lamuan",
+      "parent": 11,
+      "id": 12
+    },
+    {
+      "name": "Sta. Teresita",
+      "parent": 11,
+      "id": 13
+    },
+    {
+      "name": "Malaya",
+      "parent": 11,
+      "id": 14
+    },
+    {
+      "name": "San Roque",
+      "parent": 10,
+      "id": 15
+    },
+    {
+      "name": "Concepcion",
+      "parent": 10,
+      "id": 16
     }
   ]
 }
